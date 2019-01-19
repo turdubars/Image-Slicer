@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Get pictures</title>
+</head>
+<body>
+
+    {% for slice in slices %}
+    <img src="{{ slice }}" alt="Slices" width="200">
+    {% endfor %}
+    <!-- <img src="/static/pictures/alone-girl/slice_01_01.png" width="200"> -->
+
+    <form action="/download_pictures" method="post" enctype="multipart/form-data" >
+
+      <input type="submit" value="Save as zip" class="btn btn-primary"">
+    </form>
+
+</body>
+</html>
