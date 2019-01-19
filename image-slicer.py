@@ -38,7 +38,7 @@ def save_pictures(tiles, save_path):
     return save_path
 
 
-UPLOAD_FOLDER = '/home/arstan/Desktop/Flask/uploaded_pictures'
+UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploaded_pictures')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 
